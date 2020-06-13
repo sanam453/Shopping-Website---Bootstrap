@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* overflow-x: hidden; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my-6 {
+    margin: 6rem auto !important;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 2px 4px 8px rgba(0,0,0, .3);
+    padding: 15px 85px 15px 70px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+nav ul:last-child {
+    font-size: 18px;
+}
+
+nav ul a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+/* Header */
+.bg-img {
+    position: relative;
+    background: linear-gradient(to right, rgba(0,0,0, .5), rgba(0,0,0, .5)), url("../img/bg7.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+.bg-img .content {
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    text-shadow: 2px 4px 8px rgba(0,0,0, .3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content button {
+    width: 200px;
+    height: 50px;
+    box-shadow: 2px 4px 8px rgba(0,0,0, .3);
+}
+
+.content div.null {
+    display: block;
+    float: left;
+    margin-top: 13px;
+    height: 1px;
+    width: 35px;
+    background: black;
+}
+
+/* Cards */
+.custom-card {
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.custom-card img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.custom-card .card-body {
+    transition: all .3s linear;
+}
+
+.custom-card span a {
+    text-decoration: none;
+}
+
+.custom-card:hover {
+    box-shadow: 2px 4px 15px rgba(0,0,0, .3);
+}
+
+.custom-card:hover .card-body {
+    padding: 0 15px 15px !important;
+}
+
+.custom-card:hover .card-body .d-flex {
+    visibility: visible !important;
+}
+
+/* Custom Container */
+.custom-container {
+    position: relative;
+    height: 160vh;
+}
+
+.container-1 {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.container-2 {
+    width: 45%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container-2 .content {
+    position: absolute;
+    top: 30%;
+    left: -20%;
+}
+
+.container-3 {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+
+.container-3 .content {
+    position: absolute;
+    top: 20%;
+    left: -40%;
+}
+
+.content a {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.content a::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #111;
+    margin-top: 5px;
+}
+
+/* Paralex */
+.container-fluid {
+    background: linear-gradient(to right, rgba(0,0,0, .5), rgba(0,0,0, .5)), url("../img/bg11.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+}
+
+.container-fluid .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* Journal */
+.custom-journal a {
+    text-decoration: none;
+}
+
+.custom-journal a small:after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin-top: 10px;
+}
+
+.custom-journal a:hover h5 {
+    text-decoration: underline;
+}
+
+/* Footer */
+.foot {
+    padding: 30px 80px
+}
+
+.custom-footer {
+    background-color: #111;
+}
+
+footer {
+    font-size: 14px;
+}
+
+footer a.fa {
+    text-decoration: none;
+}
+
+footer form input {
+    padding: 10px 100px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: .5px solid #fff;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    font-weight: 100;
+}
+
+footer form input:focus,
+footer form input:focus-within {
+    outline: none;
+}
+
+footer form button.btn {
+    position: absolute;
+    right: -3%;
+    font-size: 12px;
+}
+
+.custom-line {
+    border: none;
+    height: .5px;
+}
+
+.custom-cr {
+    letter-spacing: 2px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 50px 15px 35px;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+    .custom-container {
+        display: flex !important;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .container-1,
+    .container-2,
+    .container-3 {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .container-1 img,
+    .container-2 img,
+    .container-3 img {
+        width: -webkit-fill-available;
+    }
+
+    .container-2 .content,
+    .container-3 .content {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .card-img img{
+        height: auto;
+        width: 350px;
+    }
+    
+
+    .container #journal h5,p {
+        font-size: 15px;
+    }
+
+    .foot ul {
+        flex-direction: column;
+        align-items: flex-start !important;        
+    }
+}
